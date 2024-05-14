@@ -93,184 +93,212 @@
         float: none;
         margin: 0;
     }
+<style>     
+@media only screen and (max-width : 600px) { 
 
-    .uib-button-bar {
-        padding: 10px 9px 2px;
-    }
-    </style>
-    <style type="text/css">
-    .uib-position-measure {
-        display: block !important;
-        visibility: hidden !important;
-        position: absolute !important;
-        top: -9999px !important;
-        left: -9999px !important;
-    }
+}
 
-    .uib-position-scrollbar-measure {
-        position: absolute !important;
-        top: -9999px !important;
-        width: 50px !important;
-        height: 50px !important;
-        overflow: scroll !important;
-    }
+  #body-div {
+    min-height: 100%;
+    position: relative;
+  }
 
-    .uib-position-body-scrollbar-measure {
-        overflow: scroll !important;
-    }
-    </style>
-    <style type="text/css">
-    .uib-datepicker .uib-title {
-        width: 100%;
-    }
+  #footer-div{
+    padding-bottom: 90px;
+  }
 
-    .uib-day button,
-    .uib-month button,
-    .uib-year button {
-        min-width: 100%;
-    }
+  #footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+  }
 
-    .uib-left,
-    .uib-right {
-        width: 100%
-    }
-    </style>
-    <style type="text/css">
-    .ng-animate.item:not(.left):not(.right) {
-        -webkit-transition: 0s ease-in-out left;
-        transition: 0s ease-in-out left
-    }
-    </style>
-    <style type="text/css">
-    
+</style>
 
-    [ng\:cloak],
-    [ng-cloak],
-    [data-ng-cloak],
-    [x-ng-cloak],
-    .ng-cloak,
-    .x-ng-cloak,
-    .ng-hide:not(.ng-hide-animate) {
-        display: none !important;
-    }
-
-    ng\:form {
+<style type ="text/css">
+    [uib-typeahead-popup].dropdown-menu {
         display: block;
     }
-
-    .ng-animate-shim {
-        visibility: hidden;
-    }
-
-    .ng-anchor {
-        position: absolute;
-    }
     </style>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="./index_files/app.css">
-    <style type="text/css">
-    .textbox {
-        border: 1px solid #FFFFFF;
-        height: 32px;
-        width: 275px;
-        font-family: Bentonsans, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #555;
-        padding-left: 6px;
-    }
-    </style>
-    <!--[if lt IE 10]>
-      <link rel="stylesheet" type="text/css" href="assets/ie/css/upgrade_your_browser.css"/>
-      <![endif]-->
-    <!--[if IE 9]>
-      <link rel="stylesheet" type="text/css" href="assets/ie/css/ie9.css" />
-      <![endif]-->
-<!--   <title>Travel temporary</title> -->
-    <title>Home - Travel temporary</title>
-    <link rel="shortcut icon" href="https://14bd-23-237-32-34.ngrok-free.app/365/favicon.ico">
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 
 
+<style type="text/css">
+  .textbox {
+      border: 1px solid #FFFFFF;
+      height: 32px;
+      width: 275px;
+      font-family: Bentonsans, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #555;
+      padding-left: 6px;
+  }
+  </style>
 
+<style>
+  .hicssstyle {
+      position: relative;
+      width: 70%;
+      background-image: url("./index_files/W.jpg");
+      background-size: cover;
+      background-position: center;
+      background-color: transparent;
+      border-radius: "";
+      padding: 20px;
+  }
 
-      <style>
-        body1 {
-          background-color: white;
-          color: blue;
-          text-align: center;
-          
-        }
- 
-        .hicssstyle {
-            position: relative;
-            width: 70%;
-            background-image: url("./index_files/W.jpg");
-            background-size: cover;
-            background-position: center;
-            background-color: transparent;
-            border-radius: "";
-            padding: 20px;
-        }
-
-        #login-form {
-            width: 70%;
-            max-width: 400px;
-            height: "";
-          margin: 10px;
-          padding: 20px;
-          
-          background-image: url("./index_files/R.jpg");
-          border: 2.5px solid #ccc;
-          border-bottom-color: brown;
-          border-color: rgba(66, 66, 66, 0.365);
-          border-radius: 10px 60px 30px;
-          display: inline-block;
-          font-family : Cambria ;
-          font-size: large;
-          font-weight: bold;
-        }
-        input {
-          margin: 10px;
-          padding: 5px;
-        }
-
-
-        .button{
-    display : inline-block;
-    padding: 10px 20px;
-    font-family : "Helvetica" ;
-    font-size: 16px;
+  #login-form {
+      width: 70%;
+      max-width: 400px;
+      height: "";
+    margin: 10px;
+    padding: 20px;
+    
+    background-image: url("./index_files/R.jpg");
+    border: 2.5px solid #ccc;
+    border-bottom-color: brown;
+    border-color: rgba(66, 66, 66, 0.365);
+    border-radius: 10px 60px 30px;
+    display: inline-block;
+    font-family : Cambria ;
+    font-size: large;
     font-weight: bold;
-    text-align: center;
-    text-decoration : none;
-    text-shadow: #555;
-    cursor : pointer;
-    border:none;
-    border-radius:50%;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+  }
+  input {
+    margin: 10px;
+    padding: 5px;
+  }
+
+
+  #destinationinput {
+    border: 2px solid;
+    border-color: light-grey;
+    border-radius: 40px;
+    height: 40px;
+    padding: 0 11px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+   overflow: hidden;
+   color: dark-grey;
+   background : grey;
+   margin-right : 7px;
+   padding: 4px 7px;
+   border-radius: 20px;
+  }
+
+  #destinationinput::before{
+    content: ' ';
+    transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+  }   
+
+
+  #destinationinput::after{
+   content: ''; 
+  background: dark-grey;
+  width: 1px;
+  height: 19px;
+  margin: -1px 0 0 -1px;
+  display: none;
+  animation: blink 0.5s infinite alternate;
+  }
+  
+  #destinationinput:focus {
+  border-color: blue;
+  outline: none;
+  }
+
+
+
+  
+    #destinationinput {
+    border: 2px solid;
+    border-color: light-grey;
+    border-radius: 40px;
+    height: 40px;
+    padding: 0 11px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+   overflow: hidden;
+   color: dark-grey;
+   background : grey;
+   margin-right : 7px;
+   padding: 4px 7px;
+   border-radius: 20px;
+  }
+
+  #destinationinput::before{
+    content: ' ';
+    transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+  }   
+
+
+  #destinationinput::after{
+   content: ''; 
+  background: dark-grey;
+  width: 1px;
+  height: 19px;
+  margin: -1px 0 0 -1px;
+  display: none;
+  animation: blink 0.5s infinite alternate;
+  }
+  
+  #destinationinput:focus {
+  border-color: blue;
+  outline: none;
+  }
+
+
+
+  
+@keyframes  blink {
+0% {
+opacity: 1;
+}
+49% {
+opacity: 1;
+}
+50% {
+opacity: 0; 
+}
+100% {
+opacity: 0;
+}
+
+}
+
+
+  .button{
+display : inline-block;
+padding: 10px 20px;
+font-family : "Helvetica" ;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+text-decoration : none;
+text-shadow: #555;
+cursor : pointer;
+border:none;
+border-radius:50%;
+transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
 }
 
 .primary-button{
-    background-color :#042713;
-    color: #fff;
-    font-family : sans-serif ;
+background-color :#042713;
+color: #fff;
+font-family : sans-serif ;
 
 }
 
- .secondary-button{
-    background-color :#132937;
-    color: #fff;
-    font-family : "Helvetica" ;
-
-}
 
 .button:hover{
-    background-color :#2980b9;
-    color: #fff;
+background-color :#2980b9;
+color: #fff;
 }
 
-      </style>
+</style>
+
 
 <!--      <title>Login Form</title>-->
     
