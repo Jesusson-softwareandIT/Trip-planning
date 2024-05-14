@@ -170,7 +170,7 @@
   }
 
 
-  #destinationinput {
+  #destinationinputa {
     border: 2px solid;
     border-color: light-grey;
     border-radius: 40px;
@@ -187,13 +187,13 @@
    border-radius: 20px;
   }
 
-  #destinationinput::before{
+  #destinationinputa::before{
     content: ' ';
     transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
   }   
 
 
-  #destinationinput::after{
+  #destinationinputa::after{
    content: ''; 
   background: dark-grey;
   width: 1px;
@@ -203,7 +203,7 @@
   animation: blink 0.5s infinite alternate;
   }
   
-  #destinationinput:focus {
+  #destinationinputa:focus {
   border-color: blue;
   outline: none;
   }
@@ -211,7 +211,7 @@
 
 
   
-    #destinationinput {
+    #destinationinputa {
     border: 2px solid;
     border-color: light-grey;
     border-radius: 40px;
@@ -228,13 +228,13 @@
    border-radius: 20px;
   }
 
-  #destinationinput::before{
+  #destinationinputa::before{
     content: ' ';
     transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
   }   
 
 
-  #destinationinput::after{
+  #destinationinputa::after{
    content: ''; 
   background: dark-grey;
   width: 1px;
@@ -244,11 +244,89 @@
   animation: blink 0.5s infinite alternate;
   }
   
-  #destinationinput:focus {
+  #destinationinputa:focus {
   border-color: blue;
   outline: none;
   }
 
+#destinationinputb {
+    border: 2px solid;
+    border-color: light-grey;
+    border-radius: 40px;
+    height: 40px;
+    padding: 0 11px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+   overflow: hidden;
+   color: dark-grey;
+   background : grey;
+   margin-right : 7px;
+   padding: 4px 7px;
+   border-radius: 20px;
+  }
+
+  #destinationinputb::before{
+    content: ' ';
+    transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+  }   
+
+
+  #destinationinputb::after{
+   content: ''; 
+  background: dark-grey;
+  width: 1px;
+  height: 19px;
+  margin: -1px 0 0 -1px;
+  display: none;
+  animation: blink 0.5s infinite alternate;
+  }
+  
+  #destinationinputb:focus {
+  border-color: blue;
+  outline: none;
+  }
+
+
+
+  
+    #destinationinputb {
+    border: 2px solid;
+    border-color: light-grey;
+    border-radius: 40px;
+    height: 40px;
+    padding: 0 11px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+   overflow: hidden;
+   color: dark-grey;
+   background : grey;
+   margin-right : 7px;
+   padding: 4px 7px;
+   border-radius: 20px;
+  }
+
+  #destinationinputb::before{
+    content: ' ';
+    transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+  }   
+
+
+  #destinationinputb::after{
+   content: ''; 
+  background: dark-grey;
+  width: 1px;
+  height: 19px;
+  margin: -1px 0 0 -1px;
+  display: none;
+  animation: blink 0.5s infinite alternate;
+  }
+  
+  #destinationinputb:focus {
+  border-color: blue;
+  outline: none;
+  }
 
 
   
@@ -315,7 +393,7 @@ color: #fff;
 
 <body>
     <div class="content-wrapper ">
-        <div id="image1 " style="position: absolute; overflow: hidden; left: 36px; top: 27px; width: 521px; height: 818px; z-index: 0 ">
+       <!-- <div id="image1 " style="position: absolute; overflow: hidden; left: 36px; top: 27px; width: 521px; height: 818px; z-index: 0 ">
             <img src="./index_files/pg1.jpg" alt=" " title=" " border="0" width="496" height="859">
         </div>
     </div>
@@ -342,7 +420,7 @@ color: #fff;
 
 <div id ="demacator" style="  height: 850px;">
 
-</div>
+</div>-->
 <!--    <body>-->
    
 
@@ -396,7 +474,8 @@ color: #fff;
   <form id = "countrydropdown" actiondep ="" action="javascript: ;" onsubmit=" temp()"> <!-- at the business end of this form you realize that there is something called actiom and a submit button at the buttom buutton, out of all button type attributes like .. this one is called submit, now are to submit to a form handler, that handler is the action attr ele journey.txt, actionpage.php, prints records.js or html, but we want to just allow it display on the same page W3 schools HTML Forms and dkellnar fron stack overflow (form action with javascript) helped with the advanced action func-->
 
     <label htmlFor=" destinationinput">Check Journey Distance :</label>
-    <input type="search" id = "destinationinput" name= "search" placeholder= "dummy index querystring searcher on database..." value = "e.target" onChange="method()"> <!-- gotten from note input tag is not closed-->
+    <input type="search" id = "destinationinputa" name= "search" placeholder= "dummy index querystring searcher on database..." value = "e.target" onChange="method()"> <!-- gotten from note input tag is not closed-->
+    <input type="search" id = "destinationinputb" name= "search" placeholder= "dummy index querystring searcher on database..." value = "e.target" onChange="method()"> <!-- gotten from note input tag is not closed-->  
     <hr>
 
 
