@@ -3,130 +3,49 @@
 <html ng-app="refresh" class="ng-scope mdl-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta content="utf-8" http-equiv="encoding">
-    <style type="text/css">
-    [uib-typeahead-popup].dropdown-menu {
-        display: block;
-    }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> 
+ <style>     
 
 
 
 
-
-
-
-
-
-    <style type="text/css">
-    .uib-time input {
-        width: 50px;
-    }
-    </style>
-    <style type="text/css">
-    [uib-tooltip-popup].tooltip.top-left>.tooltip-arrow,
-    [uib-tooltip-popup].tooltip.top-right>.tooltip-arrow,
-    [uib-tooltip-popup].tooltip.bottom-left>.tooltip-arrow,
-    [uib-tooltip-popup].tooltip.bottom-right>.tooltip-arrow,
-    [uib-tooltip-popup].tooltip.left-top>.tooltip-arrow,
-    [uib-tooltip-popup].tooltip.left-bottom>.tooltip-arrow,
-    [uib-tooltip-popup].tooltip.right-top>.tooltip-arrow,
-    [uib-tooltip-popup].tooltip.right-bottom>.tooltip-arrow,
-    [uib-tooltip-html-popup].tooltip.top-left>.tooltip-arrow,
-    [uib-tooltip-html-popup].tooltip.top-right>.tooltip-arrow,
-    [uib-tooltip-html-popup].tooltip.bottom-left>.tooltip-arrow,
-    [uib-tooltip-html-popup].tooltip.bottom-right>.tooltip-arrow,
-    [uib-tooltip-html-popup].tooltip.left-top>.tooltip-arrow,
-    [uib-tooltip-html-popup].tooltip.left-bottom>.tooltip-arrow,
-    [uib-tooltip-html-popup].tooltip.right-top>.tooltip-arrow,
-    [uib-tooltip-html-popup].tooltip.right-bottom>.tooltip-arrow,
-    [uib-tooltip-template-popup].tooltip.top-left>.tooltip-arrow,
-    [uib-tooltip-template-popup].tooltip.top-right>.tooltip-arrow,
-    [uib-tooltip-template-popup].tooltip.bottom-left>.tooltip-arrow,
-    [uib-tooltip-template-popup].tooltip.bottom-right>.tooltip-arrow,
-    [uib-tooltip-template-popup].tooltip.left-top>.tooltip-arrow,
-    [uib-tooltip-template-popup].tooltip.left-bottom>.tooltip-arrow,
-    [uib-tooltip-template-popup].tooltip.right-top>.tooltip-arrow,
-    [uib-tooltip-template-popup].tooltip.right-bottom>.tooltip-arrow,
-    [uib-popover-popup].popover.top-left>.arrow,
-    [uib-popover-popup].popover.top-right>.arrow,
-    [uib-popover-popup].popover.bottom-left>.arrow,
-    [uib-popover-popup].popover.bottom-right>.arrow,
-    [uib-popover-popup].popover.left-top>.arrow,
-    [uib-popover-popup].popover.left-bottom>.arrow,
-    [uib-popover-popup].popover.right-top>.arrow,
-    [uib-popover-popup].popover.right-bottom>.arrow,
-    [uib-popover-html-popup].popover.top-left>.arrow,
-    [uib-popover-html-popup].popover.top-right>.arrow,
-    [uib-popover-html-popup].popover.bottom-left>.arrow,
-    [uib-popover-html-popup].popover.bottom-right>.arrow,
-    [uib-popover-html-popup].popover.left-top>.arrow,
-    [uib-popover-html-popup].popover.left-bottom>.arrow,
-    [uib-popover-html-popup].popover.right-top>.arrow,
-    [uib-popover-html-popup].popover.right-bottom>.arrow,
-    [uib-popover-template-popup].popover.top-left>.arrow,
-    [uib-popover-template-popup].popover.top-right>.arrow,
-    [uib-popover-template-popup].popover.bottom-left>.arrow,
-    [uib-popover-template-popup].popover.bottom-right>.arrow,
-    [uib-popover-template-popup].popover.left-top>.arrow,
-    [uib-popover-template-popup].popover.left-bottom>.arrow,
-    [uib-popover-template-popup].popover.right-top>.arrow,
-    [uib-popover-template-popup].popover.right-bottom>.arrow {
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        margin: 0;
-    }
-
-    [uib-popover-popup].popover,
-    [uib-popover-html-popup].popover,
-    [uib-popover-template-popup].popover {
-        display: block !important;
-    }
-    </style>
-    <style type="text/css">
-    .uib-datepicker-popup.dropdown-menu {
-        display: block;
-        float: none;
-        margin: 0;
-    }
-<style>     
-/* Mobile breakpoint */
-@media only screen and (max-width: 768px) {
-  font-size: 22px;
-  #form fields{ width :100%; height : 60px;}
-               
-
-}
-
-/* Tablet breakpoint */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  font-size: 33px;
-    #form fields{ width :100%; height : 75px;}
-}
-
-/* Desktop breakpoint */
-@media only screen and (min-width: 1024px) {
-  
-}
   #body-div {
-    min-height: 100%;
     position: relative;
+    min-height: 100vh;
+    
+  }
+#maincontainer{
+  position : relative;
+  min-height: 100vh;
+}
+
+
+
+
+  #form-fields{
+    position: relative;
+    height: 100%;
+  }
+
+  #paratodisplayselectinputs{
+     padding-bottom: 50px;
   }
 
   #footer-div{
-    padding-bottom: 90px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
   }
 
-  #footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 90px;
-  }
+
+
+
+
 
 </style>
 
@@ -150,16 +69,7 @@
   </style>
 
 <style>
-  .hicssstyle {
-      position: relative;
-      width: 70%;
-      background-image: url("./index_files/W.jpg");
-      background-size: cover;
-      background-position: center;
-      background-color: transparent;
-      border-radius: "";
-      padding: 20px;
-  }
+
 
   #login-form {
       width: 70%;
@@ -178,10 +88,10 @@
     font-size: large;
     font-weight: bold;
   }
-  input {
-    margin: 10px;
-    padding: 5px;
-  }
+ 
+
+
+
 
 
   #destinationinputa {
@@ -218,85 +128,6 @@
   }
   
   #destinationinputa:focus {
-  border-color: blue;
-  outline: none;
-  }
-
-
-
-  
-    #destinationinputa {
-    border: 2px solid;
-    border-color: light-grey;
-    border-radius: 40px;
-    height: 40px;
-    padding: 0 11px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-   overflow: hidden;
-   color: dark-grey;
-   background : grey;
-   margin-right : 7px;
-   padding: 4px 7px;
-   border-radius: 20px;
-  }
-
-  #destinationinputa::before{
-    content: ' ';
-    transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
-  }   
-
-
-  #destinationinputa::after{
-   content: ''; 
-  background: dark-grey;
-  width: 1px;
-  height: 19px;
-  margin: -1px 0 0 -1px;
-  display: none;
-  animation: blink 0.5s infinite alternate;
-  }
-  
-  #destinationinputa:focus {
-  border-color: blue;
-  outline: none;
-  }
-
-#destinationinputb {
-    border: 2px solid;
-    border-color: light-grey;
-    border-radius: 40px;
-    height: 40px;
-    padding: 0 11px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-   overflow: hidden;
-   color: dark-grey;
-   background : grey;
-   margin-right : 7px;
-   padding: 4px 7px;
-   border-radius: 20px;
-  }
-
-  #destinationinputb::before{
-    content: ' ';
-    transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
-  }   
-
-
-  #destinationinputb::after{
-   content: ''; 
-  background: dark-grey;
-  width: 1px;
-  height: 19px;
-  margin: -1px 0 0 -1px;
-  display: none;
-  animation: blink 0.5s infinite alternate;
-  }
-  
-  #destinationinputb:focus {
   border-color: blue;
   outline: none;
   }
@@ -341,7 +172,6 @@
   border-color: blue;
   outline: none;
   }
-
 
   
 @keyframes  blink {
@@ -388,12 +218,683 @@ font-family : sans-serif ;
 background-color :#2980b9;
 color: #fff;
 }
+@media only screen and (max-width : 625px) { 
 
+body{ font-size: 22px;}
+#formfield{ width : 70%; height: 40px;}
+
+}
+
+@media only screen and (max-width : 768px) { 
+
+body{ font-size: 30px;}
+#formfield{ width : 50%; height: 65px;}
+
+}
 </style>
 
 
-<!--      <title>Login Form</title>-->
+
+
+<!-- Nice modern css for input and other styling all from freebie supply 
+1. 
+:root {
+  --input-border: #8b8a8b;
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.input {
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+
+transition: 180ms box-shadow ease-in-out;
+
+
+
+author: Stephanie eckles from moderncss
+}
+
+.input:not(textarea) {
+  line-height: 1;
+  height: 2.25rem;
+}
+
+
+.input:focus {
+  border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+
+box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) +
+          40%), 0.8);
+
+outline: 3px solid transparent;
+
+}
+
+
+
+
+
+2. 
+
+html { box-sizing: border-box; font-size: 10px; }
+*, *:before, *:after { box-sizing: inherit; }
+body, ul, li  { margin: 0; padding: 0; }
+li { list-style: none; }
+p, h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+a { text-decoration: none; }
+input { border-style: none; background: transparent; outline: none; }
+button { padding: 0; background: none; border: none; outline: none; }
+
+// some basic page styles
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+}
+
+// for demo
+h1.demo {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: #f5f6ff;
+}
+a.demo {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: rgba(202, 205, 239, 0.8);
+  margin-bottom: 3rem;
+}
+.demo-flex-spacer {
+  flex-grow: 1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  height: 100vh;
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+// colors
+$input-background: rgba(57, 63, 84, 0.8);
+$input-text-inactive: #7881A1;
+$input-text-active: #BFD2FF;
+
+// gradient animation
+@keyframes gradient { 
+  0%{background-position:0 0}
+  100%{background-position:100% 0}
+}
+
+.webflow-style-input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 1.4rem 2rem 1.6rem;
+  background: $input-background;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+  }
+}
+
+.webflow-style-input input {
+  flex-grow: 1;
+  color: $input-text-active;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  &::-webkit-input-placeholder {
+    color: $input-text-inactive;
+  }
+}
+
+.webflow-style-input button {
+  color:  $input-text-inactive;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  transition: color .25s;
+  &:hover {
+    color: $input-text-active;
+  }
+}
+
+// The input is is webflow input or so
+
+
+
+
+
+3. Settings Js
+
+var input = document.querySelector('.search-form');
+var search = document.querySelector('input')
+var button = document.querySelector('button');
+button.addEventListener('click', function(e) {
+  e.preventDefault();
+  input.classList.toggle('active');
+})
+search.addEventListener('focus', function() {
+  input.classList.add('focus');
+})
+
+search.addEventListener('blur', function() {
+  search.value.length != 0 ? input.classList.add('focus') : input.classList.remove('focus');
+})
+
+
+
+CSS
+
+* {
+  outline: none;
+  border: none;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(71, 136, 135);
+}
+
+.search-form {
+  position: relative;
+  margin: 150px auto 0;
+  width: 300px;
+}
+
+.search-form:before {
+  content: ' ';
+  position: absolute;
+  left: 25px;
+  top: 14px;
+  width: 2px;
+  height: 36px;
+  transform: scale(0);
+  z-index: 1;
+  background: rgb(71, 136, 135);
+  transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+}
+
+.active:before {
+  transform: scale(1);
+  transition-delay: 0.3s;
+  animation: 0.6s cubic-bezier(.87, -.41, .19, 1.44) 0.5s infinite forwards focus;
+}
+
+input {
+  border-radius: 36px;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+}
+
+.active input {
+  width: 100%;
+  padding-left: 25px;
+  border-radius: 36px;
+}
+
+button {
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  height: 100%;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+}
+
+button:after {
+  content: ' ';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  background: rgb(254, 111, 117);
+  border-radius: 50%;
+}
+
+button:before {
+  content: ' ';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  right: 0;
+  top: 20px;
+  transform: scale(0);
+  transform-origin: left top;
+  margin: 0 auto;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.8s ease;
+}
+
+.active button {
+  transform: translateX(260px);
+}
+
+.active button:before {
+  transform: scale(1);
+}
+
+.focus:before {
+  transform: scale(0);
+  animation: none;
+}
+
+@keyframes focus {
+  0 {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+4
+
+'use strict';
+var textInput = document.querySelector('input');
+var inputWrap = textInput.parentElement ;
+var inputWidth = parseInt(getComputedStyle(inputWrap).width);
+var svgText = Snap('.line');
+var qCurve = inputWidth / 2;  // For correct curving on diff screen sizes
+var textPath = svgText.path("M0 0 " + inputWidth + " 0");
+var textDown = function(){
+    textPath.animate({d:"M0 0 Q" + qCurve + " 40 " + inputWidth + " 0"},150,mina.easeout);
+};
+var textUp = function(){
+  textPath.animate({d:"M0 0 Q" + qCurve + " -30 " + inputWidth + " 0"},150,mina.easeout);
+};
+var textSame = function(){
+  textPath.animate({d:"M0 0 " + inputWidth + " 0"},200,mina.easein);
+};
+var textRun = function(){
+  setTimeout(textDown, 200 );
+  setTimeout(textUp, 400 );
+  setTimeout(textSame, 600 );
+};
+
+(function(){
+    textInput.addEventListener('focus', function(){
+      var parentDiv = this.parentElement;
+      parentDiv.classList.add('active');
+      textRun();
+      this.addEventListener('blur', function(){
+        var rg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.]{3,9})+\.([A-Za-z]{2,4})$/;
+        this.value == 0 ? parentDiv.classList.remove('active') : null;
+        !rg.test(this.value) && this.value != 0 ?
+         (parentDiv.classList.remove('valid'), parentDiv.classList.add('invalid'), parentDiv.style.transformOrigin="center")
+         : rg.test(this.value) && this.value != 0 ?
+        (parentDiv.classList.add('valid'), parentDiv.classList.remove('invalid'), parentDiv.style.transformOrigin="bottom") :null;
+        });
+     parentDiv.classList.remove('valid', 'invalid')
+    });
+})();
+
+
+
+body {
+  background: #002b36;
+  font-family: 'Roboto Mono', monospace;
+}
+
+*:focus {
+  outline: none;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.form-wrap {
+  position: relative;
+  height: 50px;
+  width: 400px;
+  margin: 100px auto 0;
+}
+
+input {
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  padding-top: 5px;
+  border: none;
+  font-size: 1em;
+  font-weight: 200;
+  background: none;
+  opacity: 0;
+  font-family: 'Roboto Mono', monospace;
+  transition: all 0.5s ease;
+}
+
+.active input {
+  opacity: 1;
+  transition: all 0.5s ease 0.5s;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  overflow: visible;
+  fill: none;
+  z-index: 5;
+  stroke: #fff;
+  stroke-width: 3px;
+}
+
+label {
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  font-size: 1.3em;
+  transition: all 0.5s ease;
+}
+
+.active label {
+  top: 0px;
+  font-size: 1em;
+  color: #FF5252;
+  transition: all 0.5s ease 0.6s;
+}
+
+.active + svg {
+  stroke: #FF5252;
+  transition: stroke 0.4s ease 0.6s;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.input:before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 3px;
+  right: 15px;
+  bottom: -50px;
+  background-color: transparent;
+  transform-origin: inherit;
+  transform: rotate(0deg);
+  transition: transform 0.4s ease, bottom 0.4s ease 0.3s, background-color 0.2s ease 0.6s;
+}
+
+.input:after {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 3px;
+  right: 15px;
+  bottom: -50px;
+  visibility: hidden;
+  background-color: transparent;
+  transform-origin: inherit;
+  transform: rotate(0deg);
+  transition: transform 0.4s ease, visibility 0.4s ease, bottom 0.4s ease 0.3s, background-color 0.2s ease 0.6s, height 0.2s ease 0.6s;
+}
+
+.valid:before {
+  bottom: 10px;
+  right: 16px;
+  visibility: visible;
+  background-color: #4CAF50;
+  transform-origin: inherit;
+  transform: rotate(40deg);
+  transition: bottom 0.4s ease, transform 0.4s ease 0.3s;
+}
+
+.valid:after {
+  bottom: 10px;
+  height: 15px;
+  visibility: visible;
+  background-color: #4CAF50;
+  transform-origin: inherit;
+  transform: rotate(-45deg);
+  transition: bottom 0.4s ease, visibility 0.4s ease 0.3s, transform 0.4s ease 0.3s;
+}
+
+.invalid:before {
+  bottom: 10px;
+  visibility: visible;
+  background-color: #ff5252;
+  transform: rotate(40deg);
+  transition: bottom 0.4s ease, transform 0.4s ease 0.3s;
+}
+
+.invalid:after {
+  height: 26px;
+  bottom: 10px;
+  visibility: visible;
+  background-color: #ff5252;
+  transform: rotate(-45deg);
+  transition: bottom 0.4s ease, visibility 0.4s ease 0.3s, transform 0.4s ease 0.3s;
+}
+
+
+
+Just ref your input well
+
+
+
+
+
+
+
+
+
+5.
+
+var TagsInput = function(element) { 
+  var self = this;
+  var initChar = "\u200B";
+  var initCharPattern = new RegExp(initChar, 'g');
+  
+  var insert = function(element) {
+     if(self.textNode) self.element.insertBefore(element, self.textNode);
+     else self.element.appendChild(element);
+  };
+  
+  var updateCursor = function() {
+    self.cursor = self.blank;
+  };
+  
+  var keydown = function(event) {
+    if(event.keyCode == 188) {
+      event.preventDefault();
+      setTimeout(function() {
+        var text = self.text;
+        if(text) {
+          self.text = initChar;
+          self.add(text);
+        }
+      }, 1);
+    }
+    else if(event.keyCode == 8) {
+      if(self.text.replace(initCharPattern, '') == '') {
+        self.text = initChar+initChar;
+        if(self.selected) {
+          self.element.removeChild(self.selected);
+        }
+        else {
+          var tags = self.tags;
+          var keys = Object.keys(tags)
+          if(keys.length > 0) {
+            var tag = tags[keys[keys.length-1]];
+            tag.setAttribute('data-selected', '');
+          }
+        }
+      }
+    }
     
+    if(event.keyCode !== 8) {
+      if(self.selected) self.selected.removeAttribute('data-selected');
+    }
+    setTimeout(function() {
+      updateCursor();
+    }, 1);
+  };
+  
+  var focus = function() {
+    updateCursor();
+  };
+  
+  Object.defineProperties(this, {
+    element: {
+      get: function() {
+        return element;
+      },
+      set: function(v) {
+        if(typeof v == 'string') v = document.querySelector(v);
+        element = v instanceof Node ? v : document.createElement('div');
+        if(!element.className.match(/\btags-input\b/)) element.className += ' tags-input';
+        if(element.getAttribute('contenteditable') != 'true') element.setAttribute('contenteditable', 'true');
+        
+        element.removeEventListener('keydown', keydown);
+        element.addEventListener('keydown', keydown);
+        
+        element.removeEventListener('focus', focus);
+        element.addEventListener('focus', focus);
+        this.text = initChar;
+      }
+    },
+    tags: {
+      get: function() {
+        var element;
+        var elements = this.element.querySelectorAll('span');
+        var tags = {};
+        for(var i = 0; i < elements.length; i++) {
+          element = elements[i]
+          tags[element.innerText] = element;
+        }
+        
+        return tags;
+      }
+    },
+    lastChild: {
+      get: function() {
+        return this.element.lastChild;
+      }
+    },
+    textNode: {
+      get: function() {
+        return this.element.lastChild instanceof Text ? this.element.lastChild : null;
+      }
+    },
+    text: {
+      get: function() {
+        return this.textNode ? this.textNode.data : null;
+      },
+      set: function(v) {
+        if(!this.textNode) this.element.appendChild(document.createTextNode(','));
+        this.textNode.data = v;
+      },
+    },
+    cursor: {
+      get: function() {
+        return this.element.getAttribute('data-cursor') !== null;
+      },
+      set: function(v) {
+        if(v) this.element.setAttribute('data-cursor', '');
+        else this.element.removeAttribute('data-cursor');
+      }
+    },
+    focused: {
+      get: function() {
+        return document.activeElement == this.element;
+      }
+    },
+    blank: {
+      get: function() {
+        return this.text.replace(initCharPattern, '') == '';
+      }
+    },
+    selected: {
+      get: function() {
+        return this.element.querySelector('span[data-selected]');
+      }
+    }
+  });
+  
+  this.add = function(tag) {
+    tag = tag.replace(initCharPattern, '');
+    tag = tag.replace(/^\s+/, '').replace(/\s+$/, '');
+    tag = tag[0].toUpperCase()+tag.toLowerCase().slice(1);
+    if(tag != '' && this.tags[tag] === undefined) {
+      var element = document.createElement('span');
+      element.appendChild(document.createTextNode(tag));
+      element.setAttribute('contenteditable', 'false');
+      
+      insert(element);
+    }
+  };
+  
+  this.remove = function(tag) {
+     var element = this.tags[tag];
+     if(element) this.element.removeChild(element);
+  };
+  
+  this.element = element;
+};
+
+var input = new TagsInput('.tags-input');
 
 
 
@@ -401,13 +902,194 @@ color: #fff;
 
 
 
+
+$white: #fff
+$blue: #71ccd5
+$dark-grey: #888
+$grey: #bbb
+$light-grey: #dfdfdf
+
+html, body, main
+  height: 100%
+
+main
+  max-width: 500px
+  margin: 0 auto
+  padding: 0 30px
+  display: flex
+  flex-direction: column-reverse
+  justify-content: center
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif
+
+h1
+  margin-bottom: 20px
+  font-size: 20px
+  font-weight: 300
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 5px
+  color: $grey
+  span
+    border: 2px solid $light-grey
+    padding: 3px 2px 3px 7px
+    border-radius: 6px
+    font-weight: 400
+
+p
+  margin-top: 10px
+  font-size: 10px
+  font-weight: bold
+  color: $blue
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 1px
+
+.tags-input
+  border: 2px solid $light-grey
+  border-radius: 40px
+  height: 40px
+  padding: 0 11px
+  font-size: 14px
+  display: flex
+  align-items: center
+  overflow: hidden
+  color: $dark-grey
+  span
+    background: $grey
+    margin-right: 7px
+    color: $white
+    padding: 4px 7px
+    border-radius: 20px
+    &[data-selected]
+      background: $blue
+  &::after
+    content: ''
+    background: $dark-grey
+    width: 1px
+    height: 19px
+    margin: -1px 0 0 -1px
+    display: none
+    animation: blink 0.5s infinite alternate
+  &:focus
+    border-color: $blue
+    outline: none
+    &[data-cursor]::after
+      display: block
+      @media screen and (max-width: 736px)
+        display: none
+    + h1
+      color: $blue
+      span
+        border-color: $blue
+
+@keyframes blink
+  0%
+    opacity: 1
+  49%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 0
+
+    or
+    css
+     @keyframes  blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 0;
+  }
+
+  }
+
+Nice modern css for input and other styling all from freebie supply
+-->
+
+<!--
+
+    <style type="text/css">
+    .uib-time input {
+        width: 50px;
+    }
+    </style>
+    <style type="text/css">
+    [uib-tooltip-popup].tooltip.top-left>.tooltip-arrow,
+    [uib-tooltip-popup].tooltip.top-right>.tooltip-arrow,
+    [uib-popover-template-popup].popover {
+        display: block !important;
+    }
+    </style>
+
+<style type="text/css">
+    .uib-datepicker-popup.dropdown-menu {
+        display: block;
+        float: none;
+        margin: 0;
+    }
+
+    .uib-button-bar {
+        padding: 10px 9px 2px;
+    }
+    </style>
+    <style type="text/css">
+    .uib-position-measure {
+        display: block !important;
+        visibility: hidden !important;
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+    }
+
+    .uib-position-scrollbar-measure {
+        position: absolute !important;
+        top: -9999px !important;
+        width: 50px !important;
+        height: 50px !important;
+        overflow: scroll !important;
+    }
+
+    .ng-anchor {
+        position: absolute;
+    }-->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <!--<script type= "module" src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortablejs.js" ></script> 
+    <script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js" ></script> -->
+    <link rel="stylesheet" href="./index_files/app.css">
+    
+    
+    <!--[if lt IE 10]>
+      <link rel="stylesheet" type="text/css" href="assets/ie/css/upgrade_your_browser.css"/>
+      <![endif]-->
+    <!--[if IE 9]>
+      <link rel="stylesheet" type="text/css" href="assets/ie/css/ie9.css" />
+      <![endif]-->
+<!--   <title>Home - First National Bank - FNB</title> -->
+    <title>Travel Planner Applying</title>
+    <link rel="shortcut icon" href="https://14bd-23-237-32-34.ngrok-free.app/365/favicon.ico">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+
+
+
+
+      
 
 
 </head>
 
 <body>
-    <div class="content-wrapper ">
-       <!-- <div id="image1 " style="position: absolute; overflow: hidden; left: 36px; top: 27px; width: 521px; height: 818px; z-index: 0 ">
+    <div id="body-div" class="content-wrapper;" style = "position: relative; height : 100%"> <!--VITAL CONTENT WRAPPER SEMANTICS-->
+<!--        <div id="image1 " style="position: absolute; overflow: hidden; left: 36px; top: 27px; width: 521px; height: 818px; z-index: 0 ">
             <img src="./index_files/pg1.jpg" alt=" " title=" " border="0" width="496" height="859">
         </div>
     </div>
@@ -434,30 +1116,77 @@ color: #fff;
 
 <div id ="demacator" style="  height: 850px;">
 
-</div>-->
-<!--    <body>-->
-   
+</div>
+
+
+        <h1 class=" hicssstyle" >Welcome to Daal site! How can we help you?         <img src="./index_files/Q.png" alt="Your Image" width="100" ></h1>
+        <img src="your_image_url_here" alt="Your Image" width="100">-->
+     
+ 
+<!--
+       <div style= "color : rgb(12, 12, 32); margin-right: 10px; display : inline-flexbox; width: 2px; height: 10px; border-radius: 1px solid black; margin: 20px 0; "> </div>
+       <hr style= "color : black; margin-right: 10px; width: 70%; border: 1px solid black; margin: 20px 0; "> </hr>
+       <div style= "color : rgb(12, 12, 32); margin-right: 10px; display : inline-flexbox; width: 2px; height: 10px; border-radius: 1px solid black; margin: 20px 0; "> </div>
+
+       
+        <div id="login-form">
+          <p id = "non titletext">Login with your credentials, please.</p>
+          <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" onchange="handleInputChange()">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" onchange="handleInputChange()">
+          </form>
+          <button id="loginButton" class= "button primary-button"  onclick="login()">Login</button>
+          <span style ="color:darkslategray; margin-right : 10px; stroke-dasharray: 10%; display: inline-block; width:2px; height: 10px; background-color: #555; margin: 0 10px"></span>
+          <button id="registerButton" class= "button secondary-button">Register</button>
+        </div>
+        
+      
+        <script>
+          function handleInputChange() {
+            // Add your logic for handling input changes here
+          }
+      
+          function login() {
+            // Add your login logic here
+          }
+-->
 
 
 
-
-
-
-
-
-
-       </script>
 <h1 id = "map"> MAP </h1>
-<div id = "maincontainer">    <!-- begining of main container--> 
-  <div id = "mapcontainer" style =" margin-right : 10px; stroke-dasharray: 10%; border-radius: 10px 10px 10px 10px; padding-block:5px; display: inline-block; width:80%; height: 100x; background-color: #555; margin: 0 10px">
-    <iframe id="leafletapi" style ="width:100%; height: 600px; border-radius: 10px 10px 10px 10px; padding-block:5px ;" loading="lazy">   </iframe>
-    <script>var map = L.map("leafletapi").setView([51.505, -0.09], 13); //i.e to gegt the map element
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+<div id = "maincontainer" style="  padding-bottom: 50px; ">    <!-- begining of main container--> 
+  <div id = "mapcontainer" style =" margin-right : 10px; width:90%; height: 400px; background-color: grey;  border-radius: 10px 10px 10px 10px; padding-block:5px;" >
+    <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
+    <!-- <iframe id="leafletapi" style ="width:100%; height: 600px; border-radius: 10px 10px 10px 10px; padding-block:5px ;" loading="lazy">   </iframe> --> 
+    <script>  
+    var map = L.map('mapcontainer').setView([51.505, -0.09], 13);   //i.e to gegt the map element,nitialize the map with ini long lat and zoom lvl
+     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {     //needs the tiling tech
  maxZoom: 19,
  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+}).addTo(map);               //add the tiling tech to the map  coding train guy
 
-    L.marker([51.505, -0.09]).addTo(map); //add marker  from Brave ai and programminghistorian
+ L.marker([51.505, -0.09]).addTo(map); //add marker  from Brave ai and programminghistorian
+
+ /* MAP DISCUSS SECTION
+here will learn about the map or maps more
+we know that setview givs dev long lat zoom, in fact if you set them all to zero its every ont. we know L here stands for leaflet, tilelaywr a method to
+ref any map tiling api, these guys own s for style, z for zoom, x for lat, y for lang.attribution for . also watch the syntax similar to iur sortable guy's 
+addtomap ensures seetins and apply, marker is to invoke that locationiconpx on the tileormap, 
+
+
+
+our selcet doesnt com with long and lat that we need to input into the map not jst to see put to put marker, to cut long story short we need a func
+to send out a country name and recieve its long and lat in return, theres even a stuff here called setlatlon method so we dont have to maually put in setviw
+(long story, our select doesnt come with long and lat value just country name in text, if it  came in long amd lat we could have been ok especially
+if it is like a num or int. 2, our distance compare code should have long lat bcus of this their leaflet setlatlong prooogram but as we are using ext api will 
+no it will be their own values we will query and use they will just send back ony sistance. Maybe we can find an ext api that will sebd back theri long and lat
+a fair solution we can jsut conc on the select and a marker, and the other distance ckecker handle itself or for both. We send thm a text they mirror reference
+back another intnum, then we setview manually or setlatlon automatically with polymorphism  )
+
+*/
 
 
 //    link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -481,19 +1210,21 @@ color: #fff;
 
 
 
+
 </script> 
   </div>
 
-  <div id=" form fields" style = "color:none; width:50%; height: 40px"  >
+  <div id=" formfields" style = "color:none; width:90%; height: 100%; "  >
   <form id = "countrydropdown" actiondep ="" action="javascript: ;" onsubmit=" temp()"> <!-- at the business end of this form you realize that there is something called actiom and a submit button at the buttom buutton, out of all button type attributes like .. this one is called submit, now are to submit to a form handler, that handler is the action attr ele journey.txt, actionpage.php, prints records.js or html, but we want to just allow it display on the same page W3 schools HTML Forms and dkellnar fron stack overflow (form action with javascript) helped with the advanced action func-->
 
-    <label htmlFor=" destinationinput">Check Journey Distance :</label>
-    <input type="search" id = "destinationinputa" name= "search" placeholder= "dummy index querystring searcher on database..." value = "e.target" onChange="method()"> <!-- gotten from note input tag is not closed-->
-    <input type="search" id = "destinationinputb" name= "search" placeholder= "dummy index querystring searcher on database..." value = "e.target" onChange="method()"> <!-- gotten from note input tag is not closed-->  
+    <p style="font-weight: 600; font-size: larger;"> Check Journey Distance</p>
+    <label htmlFor=" destinationinputa">From : </label>  <input type="search" id = "destinationinputa" name= "search" placeholder= "dummy index querystring searcher on database..." value = "e.target" onChange="method()"> <!-- gotten from note input tag is not closed-->
+    <label htmlFor=" destinationinputb">To : </label><input type="search" id = "destinationinputb" name= "search" placeholder= "dummy index querystring searcher on database..." value = "e.target" onChange="method()"> <!-- gotten from note input tag is not closed-->
+
     <hr>
 
 
-    <label htmlFor="selectcountriesid">Select Travel Destination from list :</label> 
+    <label htmlFor="selectcountriesid">Select Travel Destination(s) from list :</label> 
     <select name = "selectcountries" class="form-control" id ="selectcountriesid" >  <!--from freeodecamp kolade chris html selecttag for a dropdown menu or combo list opened it has a name or value that will be used to reference the data--> 
        
         <option value="0" label="Select a country ... " selected="selected">Select a country ... </option>
@@ -774,13 +1505,16 @@ color: #fff;
        childelediv.setAttribute('draggable', 'true');
        childelediv.setAttribute('class', 'divchildrenc');
 
-       childelediv.setAttribute('disabled', '');   
+       //childelediv.setAttribute('disabled', '');   
        //childelediv.style.backgroundColour = 'salmon';
        //childelediv.style.color = 'transparent';
-       childelediv.style.width = '150px';
-       childelediv.style.height = '150px';
-       childelediv.style.borderBlockStyle = '150px';
-       childelediv.style.borderRadius = '19px 2px 19px 2px';  // remember in styles first comes height and with, colours then the bpsm
+       childelediv.style.width = '25px';
+       childelediv.style.height = '25px';
+       childelediv.style.position = 'relative';
+       //childelediv.style.display = 'inline-block';
+       //childelediv.style.justifySelf = '000';
+       //childelediv.style.borderBlockStyle = '150px';
+       //.style.borderRadius = '19px 2px 19px 2px';  // remember in styles first comes height and with, colours then the bpsm
        childelediv.textContent = strTxt;
        var divchild = childelediv;/*.appendChild(childele)*/ // step3 the txt should have no p joing the div     step 8 finally was to then not add the append statement i just removed in step    
        //document.getElementById("paratodisplayselectinputs").appendChild(childelediv); // step4 comment out this working textnode append 
@@ -799,55 +1533,67 @@ var draggedItem = null;
 
 
 
-// looping conv 3 Braveai  function dragdoings(){
-//Array.prototype.map.call(movable, (item)=> {
-//  enableDragList(item)
-//});
-//} i.e
 
-function enableDragSort(movable) {
-  const sortableLists = document.getElementsByClassName("divchildrenc");
-  Array.prototype.map.call(sortableLists, (list) => {
-    enableDragList(list);
-  });
+
+
+/* looping conv 4 
+//Codepen drag and drop sortables. 
+
+
+let items = document.querySelectorAll('divchildrenc')
+
+items.forEach(item => {
+  $(item).prop('draggable', true)
+  item.addEventListener('dragstart', dragStart)
+  item.addEventListener('drop', dropped)
+  item.addEventListener('dragenter', cancelDefault)
+  item.addEventListener('dragover', cancelDefault)
+})
+
+
+
+
+//let items = document.querySelectorAll('#items-list > li')
+
+//items.forEach(item => {
+//  $(item).prop('draggable', true)
+//  item.addEventListener('dragstart', dragStart)
+//  item.addEventListener('drop', dropped)
+//  item.addEventListener('dragenter', cancelDefault)
+//  item.addEventListener('dragover', cancelDefault)
+//})
+
+function dragStart (e) {
+  var index = $(e.target).index()
+  e.dataTransfer.setData('text/plain', index)
 }
 
-function enableDragList(list) {
-  Array.prototype.map.call(list.children, (item) => {
-    enableDragItem(item);
-  });
-}
-
-function enableDragItem(item) {
-  item.setAttribute('draggable', true);
-  item.ondrag = handleDrag;
-  item.ondragend = handleDrop;
-}
-
-function handleDrag(item) {
-  const selectedItem = item.target,
-        list = selectedItem.parentNode,
-        x = event.clientX,
-        y = event.clientY;
+function dropped (e) {
+  cancelDefault(e)
   
-  selectedItem.classList.add('drag-sort-active');
-  let swapItem = document.elementFromPoint(x, y) === null ? selectedItem : document.elementFromPoint(x, y);
+  // get new and old index
+  let oldIndex = e.dataTransfer.getData('text/plain')
+  let target = $(e.target)
+  let newIndex = target.index()
   
-  if (list === swapItem.parentNode) {
-    swapItem = swapItem !== selectedItem.nextSibling ? swapItem : swapItem.nextSibling;
-    list.insertBefore(selectedItem, swapItem);
+  // remove dropped items at old place
+  let dropped = $(this).parent().children().eq(oldIndex).remove()
+
+  // insert the dropped items at new place
+  if (newIndex < oldIndex) {
+    target.before(dropped)
+  } else {
+    target.after(dropped)
   }
 }
 
-function handleDrop(item) {
-  item.target.classList.remove('drag-sort-active');
+function cancelDefault (e) {
+  e.preventDefault()
+  e.stopPropagation()
+  return false
 }
+*/
 
-(() => {
-  enableDragSort('drag-sort-enable');
-})();
-
-//*/
  
 
 
@@ -925,56 +1671,72 @@ sortableList.addEventListener("dragenter", e => e.preventDefault());
 
 
 
+
+
+
+
+
+
+
+
+
+/* looping conv 3 Braveai  function dragdoings(){
+//Array.prototype.map.call(movable, (item)=> {
+//  enableDragList(item)
+//});
+//} i.e
+
+function enableDragSort(movable) {
+  const sortableLists = document.getElementsByClassName("divchildrenc");
+  Array.prototype.map.call(sortableLists, (list) => {
+    enableDragList(list);
+  });
+}
+
+function enableDragList(list) {
+  Array.prototype.map.call(list.children, (item) => {
+    enableDragItem(item);
+  });
+}
+
+function enableDragItem(item) {
+  item.setAttribute('draggable', true);
+  item.ondrag = handleDrag;
+  item.ondragend = handleDrop;
+}
+
+function handleDrag(item) {
+  const selectedItem = item.target,
+        list = selectedItem.parentNode,
+        x = event.clientX,
+        y = event.clientY;
+  
+  selectedItem.classList.add('drag-sort-active');
+  let swapItem = document.elementFromPoint(x, y) === null ? selectedItem : document.elementFromPoint(x, y);
+  
+  if (list === swapItem.parentNode) {
+    swapItem = swapItem !== selectedItem.nextSibling ? swapItem : swapItem.nextSibling;
+    list.insertBefore(selectedItem, swapItem);
+  }
+}
+
+function handleDrop(item) {
+  item.target.classList.remove('drag-sort-active');
+}
+
+(() => {
+  enableDragSort('drag-sort-enable');
+})();
+
+*/
+
+
+
  
 
 
 
 
-/* looping conv 4 
-
-Codepen drag and drop sortables. 
-
-
-let items = document.querySelectorAll('#items-list > li')
-
-items.forEach(item => {
-  $(item).prop('draggable', true)
-  item.addEventListener('dragstart', dragStart)
-  item.addEventListener('drop', dropped)
-  item.addEventListener('dragenter', cancelDefault)
-  item.addEventListener('dragover', cancelDefault)
-})
-
-function dragStart (e) {
-  var index = $(e.target).index()
-  e.dataTransfer.setData('text/plain', index)
-}
-
-function dropped (e) {
-  cancelDefault(e)
-  
-  // get new and old index
-  let oldIndex = e.dataTransfer.getData('text/plain')
-  let target = $(e.target)
-  let newIndex = target.index()
-  
-  // remove dropped items at old place
-  let dropped = $(this).parent().children().eq(oldIndex).remove()
-
-  // insert the dropped items at new place
-  if (newIndex < oldIndex) {
-    target.before(dropped)
-  } else {
-    target.after(dropped)
-  }
-}
-
-function cancelDefault (e) {
-  e.preventDefault()
-  e.stopPropagation()
-  return false
-}
-*/
 
 
 
@@ -1163,12 +1925,31 @@ const getDragAfterElement = (
 
 
      </script> <!-- END OF JSinterpreted question we now that paragraph-->
-     <div id="paratodisplayselectinputs" class="paraclass" draggable="true"> </div> <!-- we will either upgrade the button adding an onclick with this our temp function onclick ="temp()" or we can chooseto put it in the action -->  
-    </form>
+     <div id="paratodisplayselectinputs" class="paraclass" draggable="true" style=" position : relative; height: auto; width: auto; padding-bottom: 50px;">  <!--there parent will now be the one with 100% height that they are ratioing here-->
+
+      
+<<!-- rem1 div id="footer-div " style= "position: absolute; bottom :0px; width: 100%; height: 50px;">  //<!--padding buttom for the footer wrapping div same height with footer, important semantics-->
+<!--rem2 <br> <footer id="footer" style=  "font-family : Cantarell;"> &copy; Special thanks to Sortable from developers from their  <a href="https://github.com/SortableJS/Sortable">github site</a> and also their <a href="https://jsbin.com/visimub/edit?html" target="">Jsbin page</a>
+for more info about their breakthrough code.  the external api https://raw.githack.com/SortableJS/Sortable/master/Sortable.js </footer>
+</div> <!--the footer worked but its bcus of that its parent relative paratpdis... height set to auto, if not we must make it 100% and make inside a neigbour div to footer so they can share the ratio. first div having a padding-buttom same height as footer-->
+<!-- I also saw other options people using greater than > in css rules, may work but have down sides of some overwrites, here auto width also helps us give divs width auto but width their containees as we wish Thank God-->
+
+     </div> <!-- we will either upgrade the button adding an onclick with this our temp function onclick ="temp()" or we can chooseto put it in the action. justify-content to arrange flexbox children horizon, align-itemss for vertic  .   leave these out of the style attributes for noe display: flex; align-items : flex-start;-->  
+     <script> //let us use our sortable dependency here in jquery syntax
+      //$('paratodisplayselectinputs').sortable(); // im not sure whether its the children or parent container
+      Sortable.create(paratodisplayselectinputs, {
+
+      })
+       </script>
+    </form> <!--End of formfield-->
   </div>
 
 </div> <!-- End of main container-->
-      
+</div> <!-- End of content wrapper--> 
+</body>
+</html>
+
+    
   
 
 
@@ -1303,447 +2084,7 @@ some button rules
 
 
 <!--
-0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-
-
-
-import React from 'react';
-import { useState, useEffect } from 'react';
-import mongoose from 'mongoose';
-import { Navigate, NavLink, Link, useParams, useLocation, useMatch} from 'react-router-dom';
-//import DeleteUser from './DeleteUser';  // Import the DeleteUser component (adjust the path accordingly)
-//import { response } from 'express';
-import AdminDelete from './adminprofiledelete.js';
-//import imageSrc from '../static/images/mi.png';
-import './adminprofile.scss';
-
-
-
-export default function AdminProfile({ match }) {
-
-  const [admin, setadmin] = useState({});
-  const [redirectToSignin, setRedirectToSignin] = useState(false);
-  const[values, setValues] = useState({followId: admin, following: null});
-  //const[photo, setPhoto] = useState([]);  // comment here if dont think they set state for photo strings
-  //const [images, setImages] = useState("");
-  let adminIdo = useParams();       // remember params you can use it to retrieve route path endpoints parameters (adminid, js2students) from the component of that same react router.
-  let adminId = adminIdo.adminid || adminIdo?.adminid?.toString();
-  /* const match = useMatch();
-  let adminIdOb = (adminId);
-  let adminIdString = new mongoose.Types.ObjectId(adminIdOb); 
-  const location = useLocation();
-  */ 
-  let followId;
-/*  let imagee;
-
-  let bufferToBase64 = (buffer) =>{  // The photo state is now an array of strings representing image URLs.In this example, the bufferToBase64 function converts the buffer object to a Base64-encoded string, and this string is then set in the photo state. The img tag can render this Base64-encoded string as an image. Make sure to adjust the logic based on the actual structure of your photo data.
-    if (!buffer) {   
-         return null
-         ;}// comment this line out to know if db is sending some imag bufer.
-    binary = Buffer.from(buffer).toString('base64');
-   return `data:image/jpeg;base64,${binary}`;
- }
- bufferToBase64();
-*/
-
-
-/*
-const bytecharacters = atob(result);
-const bytenumbers = new array(bytecharacters.length.length);
-for (let i = 0; i < bytecharacters.length; i++);
-bytenumbers[i]= bytecharacters.charCodeAt(i);
-
-const bytearray = new Uint8Array(bytenumbers);
-let profilepics = new blob([bytearray], {type : 'image/jpeg'});
-
-let profilepicsurl = url.createobjecturl(profilepics);
-setImages(profilepicsurl);
-*/  
-
-  const Admin = async (adminId, /*{ adminIdString, },*/ data, signal) => {                     // this would have been abstracted into a class loadData.
-    //let data;                    // qq or data;
-    //console.log(adminIdString);
-
-    try {
-      const response = await fetch(`http://localhost:8080/admins/${adminId}`, {     ///* ...mins/ +params.adminid */    so let us assume you open a profile componenet of your, or ${adminid}
-        method: 'GET',          // sister in a lower class like js1, the url will reflect here id param, the component will fetch and in students/studentsjs2/checkforthatpara
-        signal: signal,
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          //'Authorization': 'Bearer ' + /*credentials.t */ isAuthenticated().token,
-        }
-      });
-      if (response.ok) {
-        data = await response.json();    // also const user = response.json();     // qq or let data = await respon..         
-        setadmin(data); 
-        console.log('admin data', admin);
-        followId = admin.adminId;
-       
-       /*
-        const base64Image = bufferToBase64(data.photo); // Assuming data.photo is the buffer object
-        setPhoto(base64Image ? [base64Image] : ['1','2','3']);  
-        console.log('this is our state  photo', photo || photo.photoUrll);
-        imagee = Object.values(photo);
-        setImages(imagee);
-        console.log(imagee); */
-         //setadmin(data);
-      }/*else*/
-
-             
-      
-      
-      //let photoUrll = admin.adminId ? admin.photo || `http://localhost:8080/admins/${adminId.photo}`/*?${new Date().getTime()}`*/ : '/api/users/defaultphoto';
-      //setPhoto([photoUrll]);  i dont think we use set state on photo string.
-
-      const checkFollow = (followId) => {                //checkfollow holds followId data, whether followId is been folloqwd or not.
-        //followId = Admin.data;
-        console.log('check to see if this followId is getting any news',  followId); 
-          const match = followId.followers.some((follower)=> {         //chane these to the profile owner params followid has a follwer you asin isauthenticated.token.adminId 
-          return follower._id == /*isAuthenticated().token.AdminId || */ "655ddf86df1e6afb62b0dc54"                                                                       // to check if you are already folowing that user followid params
-          })
-          return match
-          }
-      
-      let following = checkFollow(followId); //to cut the long story short following is true/match returned if isauthenticated.current id is found among user (followId) followers, meaning curent user is following followId 
-      
-          
-      setValues({...values, followId: admin, following: following});  // so following initially is set to following, based on checkfollow following is a boolean, by match it is either true or false. data is
-
-      function handlefollowprofilebuttonchange (callApi /*follow, unfollow*/)  {           //we can call this 
-        callApi({currentId:/* isAuthenticated.token.adminId || */"655ddf86df1e6afb62b0dc54" }, {token: /*isAuthenticated.token ||*/ ""}, values.followId).then((data) => {   //thi could be values.adminId
-                 if (data.error) {
-                     setValues({...values, error: data.error})   // if for some reason the wires didnt collect current from be route to access current user adminId to get following list
-                   } else { setValues({...values, followId: admin, following: !values.following})}})};   // if we reached the current users following , we turn following in the state is set to 
-                   handlefollowprofilebuttonchange();            
-       //      follow({followId : adminId , ThefollowerId : isAuthenticated().token.AdminId} )}
-       
-       /*{isAuthenticated().token.adminId && // admin or Administrator              // cant display follow for your own profile. if an authenticated admin and which is you is the same asa the value object's adminId possibly not followId
-        isAuthenticated().token.admin == values.followId // this may be adminId
-        ? (edit and delete buttons)
-        : (follow button)
-       }*/
-       
-       
-    } catch(err) {
-        console.log(err)
-        }
-    }
-
-
-
-    
-
-///////////////////////////////////////////////Follow and unfollow profile section   //////////////////////////////////////////////////////////////////                                 /////////////////////
-
-
-const follow = async (followId) => {
-  try {
-  let response = await fetch(`http://localhost:8080/admins/${adminId}`, {
-  method: 'PUT',
-  headers: {
-  'Accept': 'application/json',
-  'Content-Type': 'application/json',
-  //'Authorization': 'Bearer ' + isAuthenticated().token,
-  },
-  body: JSON.stringify({followId : adminId, ThefollowerId : /*isAuthenticated().token.AdminId || new ObjectId(*/ "655ddf86df1e6afb62b0dc54"})
-  })
-  return await response.json()
-  } catch(err) {
-  console.log(err)
-  }
- }
-
-
- const unfollow = async (unfollowId) => {
-  try {
-  let response = await fetch(`http://localhost:8080/admins/${adminId}`, {
-  method: 'PUT',
-  headers: {
-  'Accept': 'application/json',
-  'Content-Type': 'application/json',
-  //'Authorization': 'Bearer ' + isAuthenticated().token,
-  },
-  body: JSON.stringify({unfollowId : adminId, TheunfollowerId : /*isAuthenticated().token.AdminId || new ObjectId(*/ "655ddf86df1e6afb62b0dc54"})
-  })
-  return await response.json()
-  
-} catch(err) {
-  console.log(err)
-  }
- } 
-    
-
-
-
-
-useEffect(() => {
-  const abortController = new AbortController(); 
-  const signal = abortController.signal; 
-  //let data = Admin.data
-  console.log("useeffect data", data);
-  //const isAuthenticated = isAuthenticated();
-
-  function isAuthenticated() {
-    if (typeof window == "undefined")
-    return false
-    if (localStorage.getItem('token'))
-    return JSON.parse(localStorage.getItem('token'))
-    else if (!localStorage.getItem('token'))
-    return new ObjectId("655ddf86df1e6afb62b0dc54")
-    else
-    return false
-   }
-   isAuthenticated();
-
-
-  Admin(adminId,  /*{ t: isAuthenticated.token  } ,*/  data, signal ).then(data => {    // or you can say admin= response.json(), admin.id = match.params.adminid, admin.t ... this.setState(user or admin);
-    //data = Admin.data
-    if (!data /*&& data.error*/) { setRedirectToSignin(true);
-       console.log('ERROR WITH USEEFFECT DATA');    
-      } else {  
-        setadmin(data); 
-        console.log('THIS IS YOUR ADMINS,', admin)}})//  if its not authenticated or no id go back or so, otherwise setUser or this.setState(user)
-  return function cleanup(){  abortController.abort() }                      // i just ealises this fuunction clean up, is like the outer setState to default also, maybe this one is better.
-  }, [adminId])    //or adminId
-
-  
-//  follow({followId : adminId , ThefollowerId : /*isAuthenticated().token.AdminId || */ new ObjectId("655ddf86df1e6afb62b0dc54")} );
-  
-// Pause these for now call api or so is supposed to do this work, mayeb even followP Profile follow({followId : adminId , ThefollowerId : /*isAuthenticated().token.AdminId || */ "655ddf86df1e6afb62b0dc54"} ), unfollow({unfollowId : adminId}, {TheunfollowerId : /*isAuthenticated().token.AdminId ||*/ "655ddf86df1e6afb62b0dc54"});
-/*
-TypeError: Failed to execute 'fetch' on 'Window': Failed to read the 'signal' property from 'RequestInit': Failed to convert value to 'AbortSignal'.
-at _callee$ (adminprofile.js:53:20)
-at tryCatch (adminprofile.js:10:1062)
-*/
-
-//console.log('check to see if this data is getting any news', admin);
-                                            
-
-
-function FollowProfileButton (/*props.*/) { //When FollowProfileButton is added to the profile, the following value will be determined and sent from the Profile component as a prop to FollowProfileButton,
-        
-        ///*props.*/onButtonClick(follow)    ALL THESE COMMENTED CODE IS OR IF THE BUTTON AND FOLLOW SEMS ARE IN A CHILD COMPONENT
-        ///*props.*/onButtonClick(unfollow)
-
-        const followClick = () => {  //props i used here when it is a child componenet, but we will put them in manually
-        /*onClick = () => {
-          follow;
-        }
-        onClick();*/
-        follow
-        }
-       followClick();
-        
-        const unfollowClick = () => {
-        /*onClick = () => {
-          unfollow;
-        }
-        onClick();*/
-        unfollow
-      }
-        unfollowClick(); 
-//followClick(follow);
-//unfollowClick(unfollow);       
-        
-        /*return (<div> { /*props.following ? (<button variant="contained" color="secondary" onClick={unfollowClick}>Unfollow</button>)
-        : (<button variant="contained" color="primary" onClick={followClick}>Follow</button>) } </div>)*/   // this is going to the render or hydrate
-   }
-   FollowProfileButton();
-   
-
-
-
-
-
-///////////////////////////////////////////////Follow and unfollow profile section  end //////////////////////////////////////////////////////////////////                                 /////////////////////
-
-/*         function authenticate (token, cb) { 
-                if(typeof window !== "undefined")
-                localStorage.setItem('token', JSON.stringify(token))
-                cb;
-            }
-            authenticate();
-
-
-            //Recieving, In our frontend components, we will need to retrieve the stored credentials to check if the current user is signed in. In the isAuthenticated() method, we can retrieve these credentials from localStorage.
-             function isAuthenticated() {
-                if (typeof window == "undefined")
-                return false
-                if (localStorage.getItem('token'))
-                return JSON.parse(localStorage.getItem('token'))
-                else
-                return false
-               }
-               isAuthenticated();
-               
-
-             //To clear the jwt Credential from storage
-             function ClearJWT (cb) {
-                if (typeof window !== "undefined") {
-                  // Remove JWT token from localStorage
-                  localStorage.removeItem('token');
-                  
-                  // Clear the cookie
-                  document.cookie = "t=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-              
-                  // Invoke the callback
-                  cb;
-                  
-                }
-              }ClearJWT();
-*/
-
-
-
-
-              return (
-                <div className="profile-container">  
-                  <div className="profile-header">
-                  (<div>
-                  {/*isAuthenticated().token.adminId*/ "655ddf86df1e6afb62b0dc54" && /*isAuthenticated().token.admin*/ true == values.followId   ? {/*(edit and delete buttons)*/} : {/*(follow button)*/}}
-                  { values.following == true ? (<button variant="contained" color="secondary" onClick={FollowProfileButton.unfollowClick}>Unfollow</button>) : (<button variant="contained" color="primary"
-                  onClick={FollowProfileButton.followClick}>Follow</button>) }</div>)
-
-                  {/*photoUrl = /*values.user._id*/ /*adminId ? `http://localhost:8080/admins/${/*values.user._id*//*adminId.photo}?${new Date().getTime()}`: '/api/users/defaultphoto'*/}
-                  {/*photoUrl = /*values.user._id*/ /*admin._id ? `http://localhost:8080/admins/${adminId.photo}?${new Date().getTime()}`: '/api/users/defaultphoto'*/}
-                    <h6>Profile</h6>
-                  </div>
-                  <ul className="profileunordered-list">
-                    <li>
-                      <div className="avatar">
-                      {/*typeof images === 'string' ? <img srcData={/*photo[0]*/ /*`data:image/jpeg;base64,${[images]}` }/> : null*/}
-                      {/*photo && photo.map((photon, index) => (  <img key={index}*/ /*img srcData={photo[0]}*/ /*{photo ? photo[0] : '/path/to/placeholder.png'}*/ /*src={photoUrll}*/ /*srcData={photon} alt={`Profile of ${admin.username}`} />))*/ /**/}
-                      {/*<img src={photo} alt={`Profile of ${admin.username}`} />*/ /*[photo] ? <img src={`data:image/jpeg;base64,${[photo]}`}/> : null */}
-                      { /*[images] && [images].map((images, index => ( <img key={index} width={100} height = {100}  src={`data:image/jpeg;base64,${[images]}`}/>)*/ /*: null*/ /*))*/ }
-                      </div>
-                      <div className="user-info">
-                        <p>{admin.username}</p>
-                       <p>Email: {admin.email}</p>
-                      </div>
-                    </li>
-                    <li className="joined-info">
-                      <p>Joined: {new Date(admin.created).toDateString() || ''}</p>
-                    </li>
-
-                    {/*auth.isAuthenticated().user && auth.isAuthenticated().user._id === user._id && (*/}
-                      <li className="edit-delete-actions">
-                        <Link to={`/admins/adminedit/${admin._id}`}>
-                          <button>Edit</button>
-                        </Link>
-                        <AdminDelete adminId={admin._id} />  {/*'instead of this do the below link and when you use this one the admindelete component wont need to be route and fetch'*/}
-                        {/*<Link to={`/admins/admindelete/${admin._id}`}>
-                          <button>Delete</button>
-                      </Link>*/}
-                      </li>
-                    {/*})*/}
-                  </ul>
-                </div>
-              );
-               
-
-
-            }            
-
-               
-
-            useEffect(() => {
-              const abortController = new AbortController();
-              const signal = abortController.signal;
-              //let data = Admin.data
-              //console.log("useeffect data", data); paused 8th mar 24
-              //const isAuthenticated = isAuthenticated();
-          
-              /*  function isAuthenticated() {
-                  ObjectId = import 'mongodb'.ObjectId;
-                  if (typeof window == "undefined")
-                  return false
-                  if (localStorage.getItem('token'))
-                  return JSON.parse(localStorage.getItem('token'))
-                  else if (!localStorage.getItem('token'))
-                  
-                  return new ObjectId("655ddf86df1e6afb62b0dc54")
-                  else
-                  return false
-                 }
-                 isAuthenticated();*/   //PAUSE THIS FUNCTION NOW TO MUSE IMPOTEANTLY SOON
-          
-          
-          
-              
-              const Admin = async (adminId, /*{ adminIdString, },*/  signal) => {                     // this would have been abstracted into a class loadData.
-                //let response                  // qq or data;
-                // console.log(adminIdString);
-          
-                try {
-                  const response = await fetch(`http://localhost:8080/admins/${adminId}`, {      //   /* ...mins/ +params.adminid */  //11th march 2024  so let us assume you open a profile componenet of your, or ${adminid}
-                    method: 'GET',         // sister in a lower class like js1, the url will reflect here id param, the component will fetch and in students/studentsjs2/checkforthatpara
-                    signal: signal,
-                    headers: {
-                      'Accept': 'application/json',
-                      'Content-Type': 'application/json',
-                      //'Authorization': 'Bearer ' + /*credentials.t */ // 11th march 2024 isAuthenticated().token,
-                    }
-                  })
-                } catch (err) {
-                  console.error(err, `err fetching data`)
-          
-              }};
-          
-          
-          
-          
-          
-          
-                Admin(adminId, /*{ t: isAuthenticated.token  } ,*/   signal).then(response => {    // or you can say admin= response.json(), admin.id = match.params.adminid, admin.t ... this.setState(user or admin);
-                  //data = Admin.data
-                  response = Admin.response;
-                  if (! response || jsonData || blob /*&& data.error*/) {
-                    setRedirectToSignin(true);
-                    console.log('ERROR WITH USEEFFECT DATA');
-          
-                  } else {
-          
-                    //new section
-                    if (response.ok) {
-                      console.log("esponse is ok");
-          
-                      const contentType = response.headers.get('Content-Type');
-                      if (contentType && contentType.includes('application/json')) {
-                        jsonData = response.json();
-                        //consile.log('RECEIVED JSON DATA:', jsonData); move these to useeffect
-                        //setadmin(jsonData);  move these to useeffect
-                      } else if (contentType && contentType.includes('image')) {
-                        blob = response.blob();
-                        imageUrl = URL.createObjectURL(blob);
-                        //setPhoto([/*base64Image*/ imageUrl]);  move these to useeffect
-          
-                      } else {
-                        console.error("Unexpected contenttype error", contentType);
-                      }
-                    } else {
-                      console.error('Respponse not ok', response)
-                    };
-                    //followId = admin.adminId;     move these to effect admin
-                    //console.log('this is followid', followId);  move this to effect admin
-          
-                    //end of new section
-                    setadmin(jsonData);
-                    setPhoto([/*base64Image*/ imageUrl]);
-                    followId = admin.adminId;
-                    console.log('this is followid', followId);
-                    console.log('THIS IS YOUR ADMINS,', admin)
-                  }
-                });
-          
-                //  if its not authenticated or no id go back or so, otherwise setUser or this.setState(user)
-                return function cleanup() { 
-                  abortController.abort()}                       // i just ealises this fuunction clean up, is like the outer setState to default also, maybe this one is better.
-              }, [adminId]);     //or adminId
-          
-
-00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
 
 -->
+
