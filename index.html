@@ -1163,7 +1163,7 @@ Nice modern css for input and other styling all from freebie supply
     <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
     <!-- <iframe id="leafletapi" style ="width:100%; height: 600px; border-radius: 10px 10px 10px 10px; padding-block:5px ;" loading="lazy">   </iframe> --> 
     <script>  
-    var map = L.map('mapcontainer').setView([51.505, -0.09], 13);   //i.e to gegt the map element,nitialize the map with ini long lat and zoom lvl
+    var map = L.map('mapcontainer').setView([51.505, -0.09], 13);    //i.e to gegt the map element,nitialize the map with ini long lat and zoom lvl
      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {     //needs the tiling tech
  maxZoom: 19,
  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -1498,8 +1498,20 @@ back another intnum, then we setview manually or setlatlon automatically with po
      <input type="submit" value="submit">
      <script>  /* we have form to enter input and select it we even have action attr and input type submit to choose and submit, but we dont want it sending to a different page we want it here just within the same html file, dues to Ishan shah solution 6 codeproject.com (I want to display form data on same page aausing javascript)*/
      
+
+/* some event listeners for form behavior/ if not could have just sperated the ele of the forms*/
+var A = document.getElementById('destinationinputa') || document.getElementById('destinationinputb');
+
+/*A.on('focus', function(){*/  A.addEventListener('focus', function(e){
+  (document.getElementById('destinationinputa').focus() == true && document.getElementById('destinationinputb').focus() == true); // so that 
+});
+A.addEventListener('submit', function(e){
+  e.target.A.value == undefined ? preventDefault(e) || e.stopImmediatePropagation() : e.KeyCode == 13;
+})
+
      var uniqueint = 0;
      var divid = "";
+     var storenow = [];
      function temp() {
 
       
@@ -1534,7 +1546,7 @@ back another intnum, then we setview manually or setlatlon automatically with po
        // here we will add the marker code wwith leaflet l.marker id options, and set the id tied to this, we hv acertained that let will give us duplictes no need for new, const will make unique
        /* let selectcountarker = L.marker([slat, slon]), {id : getelmentbyid(divid)}  or let selectcountmarker = L.marker().addTo(map); selectcount.options.id = getele... or just L.marker.setlonlat().addTo(map), l.marker().options.id = .. if dafault in the previous sems will cause problem, though i doubt*/
        //var selectcountmarkers = L.marker().addTo(map); selectcountmarkers.options.id = divid; selectcountmarkers.setLatLng([slat, slon]);  //to make it unique var marker, marker
-       var selectcountmarkers = L.marker([slat, slon],  {id : document.getElementById(divid)}).addTo(map); 
+       var selectcountmarkers = L.marker([slat, slon],  {id : document.getElementById(divid)}).addTo(map); selectcountmarkers.setLatLng([slat, slon]); 
        childelediv.setAttribute('onclick', 'untemp()'); 
        childelediv.setAttribute('draggable', 'true');
        childelediv.setAttribute('class', 'divchildrenc');
@@ -1554,14 +1566,34 @@ back another intnum, then we setview manually or setlatlon automatically with po
        //document.getElementById("paratodisplayselectinputs").appendChild(childelediv); // step4 comment out this working textnode append 
        document.getElementById("paratodisplayselectinputs").appendChild(divchild); // step5 lets now put divchild instead and go and block that step 6 up, the last of their earlier steps 
        map.setView([0, 0], 1);  // you can also do map.setView([0, 0], 0);
+      storenow.push([divid, slat, slon]);
       })
     }); 
 }
-                   function untemp(divid){   // let us have  a func to unappend                 . also adjust this remove based on div id and delete the associated marker    
+                   function untemp(){   // let us have  a func to unappend                 . also adjust this remove based on div id and delete the associated marker    
                     //document.getElementById("divchildren").remove();
-                    //document.getElementById(divid).remove();                      // maybe change them to divid 
-                    // maybe change them to divid 
-                    //childelediv.e.onclick ? map.removeLayer({id : document.getElementById(divid)}) : !map.removeLayer({id : document.getElementById(divid)}); 
+                    //console.log('storenow array eles', storenow);              fine storenow dey enter
+                    let k;
+                    for (i = 0; i < storenow.length; i++) { 
+                      for (j = 0; j < storenow[i].length; j++ ){  
+                        //storenow[i] ? console.log( storenow[i]) : console.log( ' no valid ele');  
+                        console.log( storenow[i][j] /*'j object',storenow[j]*/ ); 
+//                        j ? console.log(j) : console.log( 'no valid ele');
+                        //id = document.getElementById([i]);
+                    }};
+                      
+                    //console.log('divid', (storenow[i][divid]));
+                    document.getElementById(divid).remove();                      // maybe change them to divid 
+                   //console.log();
+                    var themarker = L.marker([storenow[0][1], storenow[0][2]], {id : storenow[0][0]}).addTo(map);   //HOW TO GET AROUND THIS
+                    console.log('THE MARKER', themarker);
+                    //themarker  ? map.removeLayer({id : storenow[0][0]}) : !map.removeLayer({id : storenow[0][0]});   // test this, should work but isnt.
+                    themarker  ? map.removeLayer(themarker) : !map.removeLayer(themarker);    // test this, should work but isnt.
+
+/*  for one loop can you believe this did not work                    var themarker = L.marker([storenow[i][slat], storenow[i][slon]], {id : storenow[i][divid]}).addTo(map);   //HOW TO GET AROUND THIS
+                    console.log('THE MARKER', themarker);
+                    themarker  ? map.removeLayer({id : storenow[i][divid]}) : !map.removeLayer({id : storenow[i][divid]});   // test this, should work but isnt.
+                  */
                   };
 
 //      var movable = document.getElementById("sortable");            ORIGINAL
@@ -2087,7 +2119,7 @@ function Retrvdestcoord(){
       
       var markerdestb = () => { 
         //markerb = L.marker([51.505, -0.09]).addTo(map);
-       latb && lonb !== undefined ? markerb.setLatLng([latb, lonb]) :  L.marker().addTo(map);
+       latb && lonb !== undefined ? markerb.setLatLng([latb, lonb]) :  L.marker([51.505, -0.09]).addTo(map);
     }; 
     markerdestb();
     /*
@@ -2210,7 +2242,7 @@ fetch('https://test.cors.workers.dev/?https://httpbin.org/post', {
 
 $(document).ready(function(){
   corsremover();
-  Retrvdestcoord ();
+  //Retrvdestcoord();
 }, []);
 
 
